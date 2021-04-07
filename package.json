@@ -1,6 +1,6 @@
 {
   "name": "scroll-speed-limit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",

@@ -45,9 +45,7 @@ function customScroll(event) {
     event.preventDefault();
     
     const deltaY = event.deltaY * (event.deltaMode === 1 ? 40 : 1);
-    const scrollParent = ((parent) => parent === document.body ? document.scrollingElement : parent)(
-        event.target.offsetParent || document.body
-    );
+    const scrollParent = document.scrollingElement || document.firstElementChild || document.body;
     if (startScroll == null) {
         startScroll = scrollParent.scrollTop;
         startScrollTime = Date.now();

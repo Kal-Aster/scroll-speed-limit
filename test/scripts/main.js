@@ -42,7 +42,7 @@
     function customScroll(event) {
         event.preventDefault();
         var deltaY = event.deltaY * (event.deltaMode === 1 ? 40 : 1);
-        var scrollParent = (function (parent) { return parent === document.body ? document.scrollingElement : parent; })(event.target.offsetParent || document.body);
+        var scrollParent = document.scrollingElement || document.firstElementChild || document.body;
         if (startScroll == null) {
             startScroll = scrollParent.scrollTop;
             startScrollTime = Date.now();
